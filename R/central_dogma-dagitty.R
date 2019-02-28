@@ -41,9 +41,9 @@ pdf("Figs/central_dogma-Dhtkd1.pdf", height = 2)
 plot(g)
 dev.off()
 
-
-
-
+svg("Figs/central_dogma-Dhtkd1.svg", height = 2)
+plot(g)
+dev.off()
 
 
 
