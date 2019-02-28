@@ -3,7 +3,7 @@
 library(broman)
 library(qtl)
 
-png("../Figs/data_fig.png", height=1000, width=1800, pointsize=28)
+png("Figs/data_fig.png", height=1000, width=1800, pointsize=28)
 
 bgcolor <- broman::brocolors("bg")
 par(bg=bgcolor, col.main="white", col="white",

@@ -10,7 +10,7 @@ yw <- rep(10, 5)
 
 for(i in 1:5) {
 
-    pdf(paste0("../Figs/batches_fig", i, ".pdf"), height=6.5, width=10, pointsize=28)
+    pdf(paste0("Figs/batches_fig", i, ".pdf"), height=6.5, width=10, pointsize=28)
     par(fg="white",col="white",col.axis="white",col.lab="white",col.main="white",
         bg=bgcolor, mar=rep(0.1, 4), bty="n")
 
@@ -29,7 +29,7 @@ for(i in 1:5) {
 }
 
 
-pdf("../Figs/batches_fig6.pdf", height=6.5, width=10, pointsize=28)
+pdf("Figs/batches_fig6.pdf", height=6.5, width=10, pointsize=28)
 par(fg="white",col="white",col.axis="white",col.lab="white",col.main="white",
     bg=bgcolor, mar=rep(0.1, 4), bty="n")
 
@@ -49,7 +49,7 @@ dev.off()
 
 
 
-pdf("../Figs/batches_fig7.pdf", height=6.5, width=10, pointsize=28)
+pdf("Figs/batches_fig7.pdf", height=6.5, width=10, pointsize=28)
 par(fg="white",col="white",col.axis="white",col.lab="white",col.main="white",
     bg=bgcolor, mar=rep(0.1, 4), bty="n")
 

@@ -6,9 +6,9 @@ library(broman)
 library(simcross)
 
 color <- brocolors("crayons")[c("Cornflower", "Blush")]
-source("colors.R")
+source("R/colors.R")
 
-pdf("../Figs/intercross.pdf", width=9.75, height=5, pointsize=14)
+pdf("Figs/intercross.pdf", width=9.75, height=5, pointsize=14)
 par(fg="white", bty="n", bg=bgcolor)
 par(mar=rep(0, 4))
 
@@ -40,7 +40,7 @@ text(564+25,(287+192)/2,expression(F[1]),cex=2,adj=c(0,0.5))
 f1 <- create_parent(100,c(1,2))
 set.seed(994)
 f2 <- vector("list",10)
-for(i in 1:10) f2[[i]] <- cross(f1,f1,m=10,obl=TRUE)
+for(i in 1:10) f2[[i]] <- cross(f1,f1,m=10,obligate.chiasma = TRUE)
 
 xloc <- 38
 mult <- 95/max(f2[[1]]$mat$locations)

@@ -2,7 +2,7 @@ library(broman)
 bgcolor <- brocolors("bg")
 iArrows <- igraph:::igraph.Arrows
 
-pdf("../Figs/causal_network.pdf", height=6, width=10, pointsize=32)
+pdf("Figs/causal_network.pdf", height=6, width=10, pointsize=32)
 par(fg="white",col="white",col.axis="white",col.lab="white",col.main="white",
     bg=bgcolor, mar=rep(0.1, 4), bty="n")
 

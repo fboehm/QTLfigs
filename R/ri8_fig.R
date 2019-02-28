@@ -2,7 +2,7 @@
 # RI lines
 ##############################
 
-source("colors.R")
+source("R/colors.R")
 color <- c(rgb(102,203,254,maxColorValue=255),
 #           rgb(254,102,254,maxColorValue=255),
            rgb(254,  0,128,maxColorValue=255),
@@ -15,7 +15,7 @@ color <- c(rgb(102,203,254,maxColorValue=255),
 
 #bitmap(file="../Figs/ri8.bmp", width=9, height=5, res=288,
 #       pointsize=14)
-pdf("../Figs/ri8.pdf", width=9.75, height=6.5, pointsize=16, onefile=TRUE)
+pdf("Figs/ri8.pdf", width=9.75, height=6.5, pointsize=16, onefile=TRUE)
 par(mar=rep(0.1,4),las=1,fg="white",col="white",col.axis="white",col.lab="white",
     bg=bgcolor,bty="n")
 plot(0,0,xlim=c(0,864),ylim=c(25,480),xaxt="n",yaxt="n",xlab="",ylab="",type="n")
@@ -62,7 +62,7 @@ if(file.exists(file)) {
     load(file)
 } else {
     f1 <- vector("list",4)
-    for(i in 1:4) f1[[i]] <- create.par(100,c(2*i-1,2*i))
+    for(i in 1:4) f1[[i]] <- create_parent(100,c(2*i-1,2*i))
     set.seed(112099)
     f2a <- cross(f1[[1]],f1[[2]],m=10,obl=TRUE)
     f2b <- cross(f1[[3]],f1[[4]],m=10,obl=TRUE)
@@ -84,9 +84,9 @@ rect(xxloc[1]+ 9,320,xxloc[1]+19,280,col=color[3],border=color[3], lend=1, ljoin
 rect(xxloc[2]-19,320,xxloc[2]- 9,280,col=color[5],border=color[5], lend=1, ljoin=1)
 rect(xxloc[2]+ 9,320,xxloc[2]+19,280,col=color[7],border=color[7], lend=1, ljoin=1)
 
-mult <- 40/f2a$mat[1,ncol(f2a$mat)]
+mult <- 40/f2a$mat$alleles[2]
 temp <- f2a$mat
-for(j in 2:ncol(temp)) {
+for(j in 2:2) {
   if(temp[2,j]==2)
     rect(xxloc[1]-19,280+temp[1,j]*mult,xxloc[1]-9,280+temp[1,j-1]*mult,
          col=color[2],border=color[2], lend=1, ljoin=1)

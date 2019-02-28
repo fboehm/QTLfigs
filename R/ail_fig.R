@@ -6,7 +6,7 @@ bgcolor <- broman::brocolors("bg")
 color <- broman::brocolors("crayons")[c("Cornflower", "Blush")]
 n.lines <- 80
 
-pdf("../Figs/ail.pdf", width=9.75, height=6.5, pointsize=16, onefile=TRUE)
+pdf("Figs/ail.pdf", width=9.75, height=6.5, pointsize=16, onefile=TRUE)
 par(mar=rep(0.1,4),las=1,fg="white",col="white",col.axis="white",col.lab="white",
     bg=bgcolor, bty="n")
 plot(0,0,xlim=c(0,864),ylim=c(25,480),xaxt="n",yaxt="n",xlab="",ylab="",type="n")
@@ -26,7 +26,7 @@ for(i in 1:2) {
 }
 
 set.seed(11716370)
-source("meiosis_func.R")
+source("R/meiosis_func.R")
 gen <- vector("list", n.lines)
 for(i in 1:n.lines)
   gen[[i]] <- create.par(100, c(1,2))

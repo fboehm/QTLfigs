@@ -1,7 +1,7 @@
 bgcolor <- broman::brocolors("bg")
 color <- broman::brocolors()
 
-pdf(file="../Figs/epistasis_f2.pdf", width=9.75, height=6.5, pointsize=12, onefile=TRUE)
+pdf(file="Figs/epistasis_f2.pdf", width=9.75, height=6.5, pointsize=12, onefile=TRUE)
 par(fg="white",col="white",col.axis="white",col.lab="white",
     bg=bgcolor)
 
